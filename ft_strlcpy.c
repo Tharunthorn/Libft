@@ -6,17 +6,17 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 12:58:51 by thmusik           #+#    #+#             */
-/*   Updated: 2022/08/15 15:34:27 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/08/15 16:00:59 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned long	ft_strlcpy(char * restrict dst, const char * restrict src,
+unsigned long	ft_strlcpy(char restrict *dst, const char restrict *src,
 	unsigned int dstsize)
 {
 	int	srclenght;
 	int	dstlenght;
 	int	index;
-	
+
 	srclenght = 0;
 	dstlenght = 0;
 	index = 0;
@@ -24,10 +24,11 @@ unsigned long	ft_strlcpy(char * restrict dst, const char * restrict src,
 		srclenght++;
 	while (dst[dstlenght] != '\0')
 		dstlenght++;
-	while (src[index] != '\0')
+	while (src[index] != '\0' && dstsize != 1)
 	{
 		dst[index] = src[index];
 		index++;
+		dstsize--;
 	}
 	while (dstlenght >= index)
 	{
@@ -38,6 +39,7 @@ unsigned long	ft_strlcpy(char * restrict dst, const char * restrict src,
 	return (srclenght);
 }
 
+/*
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
@@ -48,4 +50,4 @@ int	main(int argc, char **argv)
 	printf("%s\n", argv[1]);
 	printf("strlcpy: %lu\n", ft_strlcpy(argv[1], argv[2], atoi(argv[3])));
 	printf("%s\n", argv[1]);
-}
+}*/
