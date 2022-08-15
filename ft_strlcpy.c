@@ -6,19 +6,36 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 12:58:51 by thmusik           #+#    #+#             */
-/*   Updated: 2022/08/15 14:30:53 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/08/15 15:34:27 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 unsigned long	ft_strlcpy(char * restrict dst, const char * restrict src,
 	unsigned int dstsize)
 {
-	int	lenght;
+	int	srclenght;
+	int	dstlenght;
+	int	index;
 	
-	lenght = 0;
-	while (src[lenght] != '\0')
-		lenght ++;
-	return (lenght);
+	srclenght = 0;
+	dstlenght = 0;
+	index = 0;
+	while (src[srclenght] != '\0')
+		srclenght++;
+	while (dst[dstlenght] != '\0')
+		dstlenght++;
+	while (src[index] != '\0')
+	{
+		dst[index] = src[index];
+		index++;
+	}
+	while (dstlenght >= index)
+	{
+		dst[index] = '\0';
+		index++;
+	}
+	dst[index] = '\0';
+	return (srclenght);
 }
 
 #include<stdio.h>
