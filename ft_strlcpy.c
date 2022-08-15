@@ -6,11 +6,11 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 12:58:51 by thmusik           #+#    #+#             */
-/*   Updated: 2022/08/15 16:00:59 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/08/15 17:13:32 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned long	ft_strlcpy(char restrict *dst, const char restrict *src,
+unsigned long	ft_strlcpy(char *restrict dst, const char *restrict src,
 	unsigned int dstsize)
 {
 	int	srclenght;
