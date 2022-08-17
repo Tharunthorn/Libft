@@ -1,24 +1,25 @@
 
 /**
  * TODO Fix below
- * ? Param char* need to change from to void*
- * ? Param unsigned int need to change to size_t
  * ! Missing Norm check
  * ! Missing 42Header
+ * ? Param unsigned int need to change to size_t
  */
 
-void *ft_memset(char *adress, int value, unsigned int bytelenght)
+void *ft_memset(void *adress, int value, unsigned int bytelenght)
 {
-    int lenght;
+    unsigned int lenght;
+    unsigned char *temp;
 
     lenght = 0;
+    temp = adress;
     while (lenght < bytelenght)
     {
-        *adress = value;
-        adress++;
+        *temp = value;
+        temp++;
         lenght++;
     }
-    return (0);
+    return (adress);
 }
 
 /*
