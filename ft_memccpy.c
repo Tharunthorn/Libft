@@ -6,9 +6,10 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 00:33:00 by thmusik           #+#    #+#             */
-/*   Updated: 2022/08/20 13:22:18 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/08/20 21:46:32 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memccpy(void *restrict dst, const void *restrict src,

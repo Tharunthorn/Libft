@@ -6,20 +6,15 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 08:21:55 by thmusik           #+#    #+#             */
-/*   Updated: 2022/08/20 08:22:36 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/08/20 19:04:54 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/**
- * TODO Fix below
- * ! Missing Norm check
- */
-
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    ft_memset(s, 0, n);
+	ft_memset(s, 0, n);
 }
 
 /*

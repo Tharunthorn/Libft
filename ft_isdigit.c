@@ -6,22 +6,17 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/19 23:24:12 by thmusik           #+#    #+#             */
-/*   Updated: 2022/08/20 08:32:06 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/08/20 20:54:35 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/**
- * TODO Fix below
- * ! Missing Norm check
- */
+#include"libft.h"
 
-#include "libft.h"
-
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    if (c >= 48 && c <= 57)
-        return (1);
-    return (0);
+	if (c >= 48 && c <= 57)
+		return (1);
+	return (0);
 }
 
 /*

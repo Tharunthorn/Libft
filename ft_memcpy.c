@@ -6,31 +6,26 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 00:43:31 by tharunthorn       #+#    #+#             */
-/*   Updated: 2022/08/20 13:05:35 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/08/20 22:02:33 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/**
- * TODO Fix below
- * ! Missing Norm check
- */
-
 #include "libft.h"
 
-void *ft_memcpy(void *dst, const void *src, size_t bytesize)
+void	*ft_memcpy(void *dst, const void *src, size_t bytesize)
 {
-    while (bytesize--)
-    {
-        *(unsigned char *)dst = *(const unsigned char *)src;
-        dst++;
-        src++;
-    }
-    while (*(unsigned char *)dst != '\0')
-    {
-        *(unsigned char *)dst = '\0';
-        dst++;
-    }
-    return (dst);
+	while (bytesize--)
+	{
+		*(unsigned char *)dst = *(const unsigned char *)src;
+		dst++;
+		src++;
+	}
+	while (*(unsigned char *)dst != '\0')
+	{
+		*(unsigned char *)dst = '\0';
+		dst++;
+	}
+	return (dst);
 }
 
 /*

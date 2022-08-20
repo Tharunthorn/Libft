@@ -6,37 +6,34 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 09:08:28 by thmusik           #+#    #+#             */
-/*   Updated: 2022/08/20 09:09:15 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/08/20 22:08:48 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t strlcat(char *restrict dst, const char *restrict src,
-               size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-    register char *d = dst;
-    register const char *s = src;
-    register unsigned int n = size;
-    unsigned int dstlen;
+	size_t		idx;
+	size_t		src_idx;
+	size_t		value;
 
-    while (n-- != 0 && *d != '\0')
-        d++;
-    dstlen = d - dst;
-    n = size - dstlen;
-
-    if (n == 0)
-        return (dstlen + strlen(s));
-    while (*s != '\0')
-    {
-        if (n != 1)
-        {
-            *d++ = *s;
-            n--;
-        }
-        s++;
-    }
-    *d = '\0';
-
-    return (dstlen + (s - src));
+	if (size == 0)
+		return (ft_strlen(src));
+	else if (size < ft_strlen(dest))
+		value = ft_strlen(src) + size;
+	else
+		value = ft_strlen(src) + ft_strlen(dest);
+	idx = 0;
+	while (dest[idx] != '\0')
+		idx++;
+	src_idx = 0;
+	while (src[src_idx] != '\0' && idx + 1 < size)
+	{
+		dest[idx] = src[src_idx];
+		src_idx++;
+		idx++;
+	}
+	dest[idx] = '\0';
+	return (value);
 }

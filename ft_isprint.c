@@ -6,22 +6,17 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/19 23:25:14 by thmusik           #+#    #+#             */
-/*   Updated: 2022/08/20 08:33:20 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/08/20 20:55:44 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/**
- * TODO Fix below
- * ! Missing Norm check
- */
-
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    if (c >= 32 && c <= 126)
-        return (1);
-    return (0);
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
 }
 
 /*

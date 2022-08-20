@@ -6,19 +6,19 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 09:21:55 by thmusik           #+#    #+#             */
-/*   Updated: 2022/08/20 09:22:19 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/08/20 21:58:00 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if (c >= 65 && c <= 90)
-    {
-        return (c + 32);
-    }
-    return (c);
+	if (c >= 65 && c <= 90)
+	{
+		return (c + 32);
+	}
+	return (c);
 }
 
 /*
