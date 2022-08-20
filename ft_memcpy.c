@@ -6,7 +6,7 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 00:43:31 by tharunthorn       #+#    #+#             */
-/*   Updated: 2022/08/20 08:47:18 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/08/20 13:05:35 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,23 +19,16 @@
 
 void *ft_memcpy(void *dst, const void *src, size_t bytesize)
 {
-    unsigned char *tempdst;
-    const unsigned char *tempsrc;
-    unsigned int lenght;
-
-    tempdst = dst;
-    tempsrc = src;
-    lenght = 0;
-    while (lenght < bytesize)
+    while (bytesize--)
     {
-        *tempdst = tempsrc[lenght];
-        tempdst++;
-        lenght++;
+        *(unsigned char *)dst = *(const unsigned char *)src;
+        dst++;
+        src++;
     }
-    while (*tempdst != '\0')
+    while (*(unsigned char *)dst != '\0')
     {
-        *tempdst = '\0';
-        tempdst++;
+        *(unsigned char *)dst = '\0';
+        dst++;
     }
     return (dst);
 }

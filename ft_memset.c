@@ -6,7 +6,7 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 00:43:38 by tharunthorn       #+#    #+#             */
-/*   Updated: 2022/08/20 08:54:25 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/08/20 13:08:36 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,10 @@
 
 void *ft_memset(void *adress, int value, size_t bytelenght)
 {
-    unsigned int lenght;
-    unsigned char *temp;
-
-    lenght = 0;
-    temp = adress;
-    while (lenght < bytelenght)
+    while (bytelenght--)
     {
-        *temp = value;
-        temp++;
-        lenght++;
+        *(unsigned char *)adress = value;
+        adress++;
     }
     return (adress);
 }
