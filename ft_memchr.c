@@ -6,29 +6,23 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 00:43:18 by tharunthorn       #+#    #+#             */
-/*   Updated: 2022/08/20 12:44:40 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/08/20 13:25:48 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/**
- * TODO Fix below
- * ! Missing Norm check
- */
-
 #include "libft.h"
 
-void *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-    size_t len;
+	size_t	len;
 
-    len = 0;
-    while (n--)
-    {
-        if (*(const unsigned char *)s == c)
-            break;
-        s++;
-    }
-    return ((void *)s + len);
+	len = 0;
+	while (n--)
+	{
+		if (*(const unsigned char *)s == c)
+			break ;
+		s++;
+	}
+	return ((void *)s + len);
 }
 
 /*
