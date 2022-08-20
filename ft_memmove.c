@@ -6,7 +6,7 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 00:43:34 by tharunthorn       #+#    #+#             */
-/*   Updated: 2022/08/20 08:52:04 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/08/20 17:29:54 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,34 +19,29 @@
 
 void *ft_memmove(void *dst, const void *src, size_t len)
 {
-    unsigned char *dsttemp;
     unsigned char *lastdst;
-    const unsigned char *srctemp;
-    const unsigned char *lastsrc;
+    unsigned char *lastsrc;
 
-    dsttemp = dst;
-    srctemp = src;
-    if (dsttemp < srctemp)
+    if ((unsigned char *)dst < (const unsigned char *)src)
         while (len--)
-            *dsttemp++ = *srctemp++;
+            *(unsigned char *)dst++ = *(const unsigned char *)src++;
     else
     {
-        lastdst = dsttemp + (len - 1);
-        lastsrc = srctemp + (len - 1);
+        lastdst = (unsigned char *)dst + (len - 1);
+        lastsrc = (unsigned char *)src + (len - 1);
         while (len--)
-            *lastdst-- = *lastsrc--;
+            *(unsigned char *)lastdst-- = *lastsrc--;
     }
     return (dst);
 }
 
-/*
 #include <stdio.h>
 #include <string.h>
 
 int main()
 {
     char str1[] = "Geeks"; // Array of size 100
-    char str2[] = "Quiz";  // Array of size 5
+    char str2[] = "Quize"; // Array of size 5
 
     puts("str1 before memmove ");
     puts(str1);
@@ -58,4 +53,3 @@ int main()
     puts(str1);
     return 0;
 }
-*/
