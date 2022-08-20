@@ -1,0 +1,58 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/20 08:09:36 by thmusik           #+#    #+#             */
+/*   Updated: 2022/08/20 08:24:27 by thmusik          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/**
+ * TODO Fix below
+ * ! Missing Norm check
+ */
+
+#include "libft.h"
+
+int ft_atoi(const char *str)
+{
+    int i;
+    int sign;
+    long int result;
+
+    i = 0;
+    sign = 1;
+    result = 0;
+    while ((str[i] >= 9 && str[i] <= 13) && str[i] == 32)
+        i++;
+    if (str[i] == 45 || str[i] == 43)
+    {
+        if (str[i] == 45)
+            sign *= -1;
+        i++;
+    }
+    while (str[i] >= 48 && str[i] <= 57)
+    {
+        result += str[i] - 48;
+        result *= 10;
+        i++;
+    }
+    result /= 10;
+    return (result * sign);
+}
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char **argv)
+{
+    (void)argc;
+    printf("original atoi: %d\n", atoi(argv[1]));
+    printf("copy atoi: %d\n", ft_atoi(argv[1]));
+    return (0);
+}
+*/
