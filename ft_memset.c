@@ -6,25 +6,20 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 00:43:38 by tharunthorn       #+#    #+#             */
-/*   Updated: 2022/08/20 13:08:36 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/08/20 18:08:58 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/**
- * TODO Fix below
- * ! Missing 42Header
- */
-
 #include "libft.h"
 
-void *ft_memset(void *adress, int value, size_t bytelenght)
+void	*ft_memset(void *adress, int value, size_t bytelenght)
 {
-    while (bytelenght--)
-    {
-        *(unsigned char *)adress = value;
-        adress++;
-    }
-    return (adress);
+	while (bytelenght--)
+	{
+		*(unsigned char *)adress = value;
+		adress++;
+	}
+	return (adress);
 }
 
 /*
