@@ -6,7 +6,7 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 08:11:25 by thmusik           #+#    #+#             */
-/*   Updated: 2022/08/22 11:20:59 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/08/24 22:58:33 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ int		ft_isalpha(int c);
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
-void	*ft_memccpy(void *restrict dst, const void *restrict src,
-			int terminatebyte, size_t bytelenght);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t bytesize);
