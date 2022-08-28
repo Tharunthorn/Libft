@@ -6,7 +6,7 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 09:18:52 by thmusik           #+#    #+#             */
-/*   Updated: 2022/08/20 21:57:33 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/08/28 22:25:59 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,16 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*temp;
-	char	*str;
+	int	i;
 
-	temp = (char *)0;
-	while (*s++)
+	i = ft_strlen(s);
+	while (i >= 0)
 	{
-		str = (char *)s;
-		if (*str == c)
-			temp = (char *)s;
+		if (s[i] == (char)c)
+			return ((char*)(s + i));
+		i--;
 	}
-	return (temp);
+	return (NULL);
 }
 
 /*
@@ -33,8 +32,8 @@ char	*ft_strrchr(const char *s, int c)
 
 int main()
 {
-    const char str[] = "http://www.tutorialspoint.com";
-    const char ch = '.';
+    const char str[] = "abbbbbbbb";
+    const char ch = 'a';
     char *ret;
 
     ret = ft_strrchr(str, ch);
@@ -44,3 +43,4 @@ int main()
     return (0);
 }
 */
+
