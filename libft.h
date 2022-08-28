@@ -6,7 +6,7 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 08:11:25 by thmusik           #+#    #+#             */
-/*   Updated: 2022/08/26 08:55:28 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/08/27 23:34:59 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,13 +64,15 @@ char	*ft_strdup(const char *str);
 
 char	*ft_strjoin(char const *s1, char const *s2);
 
-size_t	strlcat(char *restrict dst, const char *restrict src,
+size_t	ft_strlcat(char *restrict dst, const char *restrict src,
 			size_t size);
 
 size_t	ft_strlcpy(char *restrict dst, const char *restrict src,
 			size_t dstsize);
 
 size_t	ft_strlen(const char *str);
+
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
