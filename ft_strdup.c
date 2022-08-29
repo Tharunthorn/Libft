@@ -6,7 +6,7 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 09:06:46 by thmusik           #+#    #+#             */
-/*   Updated: 2022/08/20 22:09:06 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/08/29 16:19:24 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,12 @@
 char	*ft_strdup(const char *str)
 {
 	int		len;
-	char	*copy;
+	void	*copy;
 
-	len = 0;
-	while (str[len] != '\0')
-		len++;
-	copy = (char *)malloc(len + 1);
-	if (!copy)
-		return (0);
-	ft_memcpy(copy, str, len);
+	len = ft_strlen(str) + 1;
+	copy = malloc(len);
+	if (copy)
+		return (ft_memcpy(copy, str, len));
 	return (copy);
 }
 
