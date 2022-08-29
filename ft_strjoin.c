@@ -6,7 +6,7 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 11:41:47 by thmusik           #+#    #+#             */
-/*   Updated: 2022/08/27 23:15:38 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/08/29 16:58:18 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	lens3;
 
 	lens3 = 0;
+	if (!s1 || !s2)
+		return (0);
 	s3 = (char *)malloc(ft_strlen(s1) + ft_strlen(s2));
 	if (!s3)
 		return (0);

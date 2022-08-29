@@ -6,7 +6,7 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 00:43:31 by tharunthorn       #+#    #+#             */
-/*   Updated: 2022/08/28 20:22:55 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/08/29 19:21:12 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		*(char*)(dst + i) = *(char*)(src + i);
+		*(char *)(dst + i) = *(char *)(src + i);
 		i++;
 	}
 	return (dst);
@@ -48,4 +48,3 @@ int main()
     return 0;
 }
 */
-

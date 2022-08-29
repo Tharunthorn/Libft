@@ -6,7 +6,7 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 12:58:51 by thmusik           #+#    #+#             */
-/*   Updated: 2022/08/28 23:49:35 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/08/29 19:24:26 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@ size_t	ft_strlcpy(char *restrict dst, const char *restrict src,
 	size_t	srclen;
 
 	srclen = ft_strlen(src);
-    if (srclen + 1 < dstsize)
-        ft_memcpy(dst, src, srclen + 1);
-    else if (dstsize != 0)
+	if (srclen + 1 < dstsize)
+		ft_memcpy(dst, src, srclen + 1);
+	else if (dstsize != 0)
 	{
-        ft_memcpy(dst, src, dstsize - 1);
-        dst[dstsize - 1] = '\0';
-    }
-    return (srclen);
+		ft_memcpy(dst, src, dstsize - 1);
+		dst[dstsize - 1] = '\0';
+	}
+	return (srclen);
 }
 
 /*

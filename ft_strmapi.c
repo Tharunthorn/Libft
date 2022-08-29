@@ -6,7 +6,7 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 09:03:23 by thmusik           #+#    #+#             */
-/*   Updated: 2022/08/28 18:58:50 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/08/29 18:47:08 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*str;
 	int		i;
 
+	if (!s)
+		return (0);
 	str = ft_strdup(s);
 	i = 0;
 	if (!str)

@@ -6,78 +6,75 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 12:35:58 by thmusik           #+#    #+#             */
-/*   Updated: 2022/08/25 14:07:02 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/08/29 19:06:23 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
-#include<stdio.h>
 
-int	intlen(int n)
+static int	ft_estim(long n)
 {
-	int	result;
+	size_t	estim;
+	int		isneg;
 
-	result = 0;
+	estim = 0;
+	isneg = 0;
 	if (n < 0)
-		n *= -1;
-	while (n > 0)
 	{
-		result++;
+		estim++;
+		isneg++;
+		n = -n;
+	}
+	while (n >= 1)
+	{
+		estim++;
 		n /= 10;
 	}
-	return (result);
+	return (estim);
 }
 
-int	ft_pow(int n, int p)
+static char	*ft_gen(char *rtn, long nbr, int len, int isneg)
 {
-	int		result;
-
-	result = 1;
-	if (p == 0)
-		return (result);
-	while (p--)
-		result *= n;
-	return (result);
-}
-
-void	reverse(char *x, int begin, int end)
-{
-	char	c;
-
-	if (begin >= end)
-		return ;
-	c = *(x + begin);
-	*(x + begin) = *(x + end);
-	*(x + end) = c;
-	reverse(x, ++begin, --end);
+	if (nbr != 0)
+		rtn = malloc(sizeof(char) * (len + 1));
+	else
+		return (rtn = ft_strdup("0"));
+	if (!rtn)
+		return (0);
+	isneg = 0;
+	if (nbr < 0)
+	{
+		isneg++;
+		nbr = -nbr;
+	}
+	rtn[len] = '\0';
+	while (--len)
+	{
+		rtn[len] = (nbr % 10) + '0';
+		nbr /= 10;
+	}
+	if (isneg == 1)
+		rtn[0] = '-';
+	else
+		rtn[0] = (nbr % 10) + '0';
+	return (rtn);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*result;
-	int		nlen;
-	int		i;
+	int		len;
+	char	*rtn;
+	long	nbr;
+	int		isneg;
 
-	i = 0;
-	nlen = intlen(n);
-	result = (char *)malloc(nlen * sizeof(int));
-	if (!result)
+	nbr = n;
+	len = ft_estim(nbr);
+	rtn = 0;
+	isneg = 0;
+	rtn = ft_gen(rtn, nbr, len, isneg);
+	if (!rtn)
 		return (0);
-	if (n < 0)
-	{
-		result[i] = '-';
-		n *= -1;
-		i++;
-	}
-	while (i <= nlen)
-	{
-		result[i] = (n % 10) + 48;
-		n /= 10;
-		i++;
-	}
-	result[i] = '\0';
-	reverse(result, 1, nlen);
-	return (result);
+	return (rtn);
 }
 
 /*
@@ -86,7 +83,7 @@ char	*ft_itoa(int n)
 int	main(int argc, char **argv)
 {
 	(void)argc;
-	printf("%s\n", ft_itoa(-100000));
+	printf("%s\n", ft_itoa(153));
 	return (0);
 }
 */

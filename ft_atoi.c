@@ -6,13 +6,13 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 08:09:36 by thmusik           #+#    #+#             */
-/*   Updated: 2022/08/29 00:51:57 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/08/29 19:10:00 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int resultcheck(long result)
+int	resultcheck(long result)
 {
 	if (result > 2147483649)
 		return (0);
@@ -30,7 +30,6 @@ int	ft_atoi(const char *str)
 	i = 0;
 	sign = 1;
 	result = 0;
-
 	while ((str[i] >= 9 && str[i] <= 13) || (str[i] == 32))
 		i++;
 	if (str[i] == 45 || str[i] == 43)
@@ -46,10 +45,6 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	result /= 10;
-	if (result * sign > 2147483649)
-		return (0);
-	if (result * sign < -2147483649)
-		return (-1);
 	return (resultcheck(result * sign));
 }
 
