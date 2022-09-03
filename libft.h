@@ -6,7 +6,7 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 08:11:25 by thmusik           #+#    #+#             */
-/*   Updated: 2022/08/28 18:54:27 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/09/01 10:40:49 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,8 @@ void	ft_putnbr_fd(int n, int fd);
 
 void	ft_putstr_fd(char *s, int fd);
 
+char **ft_split(char const *s, char c);
+
 char	*ft_strchr(const char *s, int c);
 
 char	*ft_strdup(const char *str);
@@ -66,11 +68,9 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 char	*ft_strjoin(char const *s1, char const *s2);
 
-size_t	ft_strlcat(char *restrict dst, const char *restrict src,
-			size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
-size_t	ft_strlcpy(char *restrict dst, const char *restrict src,
-			size_t dstsize);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
 size_t	ft_strlen(const char *str);
 
