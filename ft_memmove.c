@@ -6,7 +6,7 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 00:43:34 by tharunthorn       #+#    #+#             */
-/*   Updated: 2022/08/30 13:47:21 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/09/03 15:56:59 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char	*s;
 
 	if (!dst || !src)
-		return (0);
+		return (NULL);
 	d = (char *)dst;
 	s = (char *)src;
 	if (dst == src)

@@ -6,7 +6,7 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 08:59:54 by thmusik           #+#    #+#             */
-/*   Updated: 2022/08/30 11:56:20 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/09/03 11:31:39 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,15 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	size_t	i;
+	size_t	len;
 
-	i = 0;
-	if (!s)
-		return ;
-	while (i <= ft_strlen(s) - 1)
+	if (s && fd != -1)
 	{
-		ft_putchar_fd(*(s + i), fd);
-		i++;
+		len = ft_strlen(s);
+		write(fd, s, len);
+		write(fd, "\n", 1);
 	}
-	ft_putchar_fd('\n', fd);
-	ft_putchar_fd(*(s + i), fd);
 }
-
 /*
 int main(int argc, char **argv)
 {

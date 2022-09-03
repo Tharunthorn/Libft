@@ -6,7 +6,7 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 08:11:25 by thmusik           #+#    #+#             */
-/*   Updated: 2022/09/01 10:40:49 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/09/03 16:05:38 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void	ft_putnbr_fd(int n, int fd);
 
 void	ft_putstr_fd(char *s, int fd);
 
-char **ft_split(char const *s, char c);
+char	**ft_split(char const *s, char c);
 
 char	*ft_strchr(const char *s, int c);
 

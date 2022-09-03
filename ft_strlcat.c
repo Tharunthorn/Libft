@@ -6,36 +6,37 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 09:08:28 by thmusik           #+#    #+#             */
-/*   Updated: 2022/09/02 23:57:50 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/09/03 11:24:24 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	idx;
-	size_t	src_idx;
-	size_t	value;
+	register char		*d;
+	register const char	*s;
+	register size_t		n;
+	size_t				dlen;
 
-	if (!dest || !src)
-		return (0);
-	if (size == 0)
-		return (ft_strlen(src));
-	else if (size < ft_strlen(dest))
-		value = ft_strlen(src) + size;
-	else
-		value = ft_strlen(src) + ft_strlen(dest);
-	idx = 0;
-	while (dest[idx] != '\0')
-		idx++;
-	src_idx = 0;
-	while (src[src_idx] != '\0' && idx + 1 < size)
+	d = dst;
+	s = src;
+	n = size;
+	while (n-- != 0 && *d != '\0')
+		d++;
+	dlen = d - dst;
+	n = size - dlen;
+	if (n == 0)
+		return (dlen + ft_strlen(s));
+	while (*s != '\0')
 	{
-		dest[idx] = src[src_idx];
-		src_idx++;
-		idx++;
+		if (n != 1)
+		{
+			*d++ = *s;
+			n--;
+		}
+		s++;
 	}
-	dest[idx] = '\0';
-	return (value);
+	*d = '\0';
+	return (dlen + (s - src));
 }

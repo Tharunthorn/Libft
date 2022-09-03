@@ -6,7 +6,7 @@
 #    By: thmusik <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/29 00:52:53 by thmusik           #+#    #+#              #
-#    Updated: 2022/08/30 12:05:42 by thmusik          ###   ########.fr        #
+#    Updated: 2022/09/03 17:02:31 by thmusik          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,4 +35,4 @@ fclean:			clean
 
 re:				fclean $(NAME)
 
-.PHONY:			all clean fclean re bonus
+.PHONY:			all clean fclean re
