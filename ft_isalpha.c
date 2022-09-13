@@ -6,14 +6,9 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/19 23:20:51 by thmusik           #+#    #+#             */
-/*   Updated: 2022/08/20 08:30:28 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/09/14 00:13:35 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/**
- * TODO Fix below
- * ! Missing Norm check
- */
 
 #include "libft.h"
 

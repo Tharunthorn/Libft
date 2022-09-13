@@ -6,7 +6,7 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 09:06:46 by thmusik           #+#    #+#             */
-/*   Updated: 2022/08/29 16:19:24 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/09/14 00:18:49 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strdup(const char *str)
 {
-	int		len;
+	size_t	len;
 	void	*copy;
 
 	len = ft_strlen(str) + 1;
