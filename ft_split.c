@@ -6,7 +6,7 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 19:45:47 by thmusik           #+#    #+#             */
-/*   Updated: 2022/09/13 23:32:41 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/09/15 10:17:45 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,8 @@ char	**ft_split(char const *s, char c)
 		while (*(s + i) == c)
 			i++;
 		size = ft_splitsize(s, c, i);
-		if (!(*(strs + j) = ft_substr(s, i, size)) || !strs)
+		*(strs + j) = ft_substr(s, i, size);
+		if (!(*(strs + j)) || !strs)
 		{
 			ft_free(strs, j);
 			return (NULL);
