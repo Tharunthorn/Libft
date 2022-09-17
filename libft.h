@@ -6,7 +6,7 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 08:11:25 by thmusik           #+#    #+#             */
-/*   Updated: 2022/09/15 00:21:59 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/09/16 21:39:28 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,13 @@ int		ft_isprint(int c);
 
 char	*ft_itoa(int n);
 
+void	ft_lstadd_front(t_list **lst, t_list *new);
+
+t_list	*ft_lstlast(t_list *lst);
+
 t_list	*ft_lstnew(void *content);
+
+int	ft_lstsize(t_list *lst);
 
 void	*ft_memchr(const void *s, int c, size_t n);
 
