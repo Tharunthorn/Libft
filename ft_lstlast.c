@@ -6,7 +6,7 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 13:57:26 by thmusik           #+#    #+#             */
-/*   Updated: 2022/09/20 18:08:18 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/09/20 21:30:53 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	register t_list *temp;
+	register t_list	*temp;
 
 	if (!lst)
 		return (NULL);
@@ -25,4 +25,3 @@ t_list	*ft_lstlast(t_list *lst)
 	}
 	return (temp);
 }
-
