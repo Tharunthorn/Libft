@@ -6,7 +6,7 @@
 #    By: thmusik <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/29 00:52:53 by thmusik           #+#    #+#              #
-#    Updated: 2022/09/16 21:39:19 by thmusik          ###   ########.fr        #
+#    Updated: 2022/09/20 11:45:32 by thmusik          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRCS			=	ft_isalnum.c ft_isprint.c ft_memcmp.c  ft_putchar_fd.c \
 					ft_putstr_fd.c  ft_strjoin.c ft_strmapi.c ft_strtrim.c ft_striteri.c
 
 BONUS			=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
-					ft_lstiter.c \
+					ft_lstiter.c ft_lstdelone.c ft_lstclear.c ft_lstmap.c\
 
 OBJS			= $(SRCS:.c=.o)
 BOBJS			= $(BONUS:.c=.o)

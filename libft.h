@@ -6,7 +6,7 @@
 /*   By: thmusik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 08:11:25 by thmusik           #+#    #+#             */
-/*   Updated: 2022/09/16 21:39:28 by thmusik          ###   ########.fr       */
+/*   Updated: 2022/09/20 11:45:23 by thmusik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,13 +44,19 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 
 void	ft_lstadd_front(t_list **lst, t_list *new);
 
+void	ft_lstclear(t_list **lst, void (*del)(void *));
+
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
+
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 t_list	*ft_lstlast(t_list *lst);
 
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
 t_list	*ft_lstnew(void *content);
 
-int	ft_lstsize(t_list *lst);
+int		ft_lstsize(t_list *lst);
 
 void	*ft_memchr(const void *s, int c, size_t n);
 
